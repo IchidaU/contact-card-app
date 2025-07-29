@@ -5,6 +5,9 @@ import App from "../App";
 test("render App component", async () => {
   render(<App />);
 
-  const h1 = screen.getByRole("heading");
-  expect(h1).toHaveTextContent("Vite + React");
+  const buttons = screen.getAllByRole("button");
+  expect(buttons).toHaveLength(2);
+
+  expect(buttons[0]).toHaveTextContent("1");
+  expect(buttons[1]).toHaveTextContent("2");
 });
