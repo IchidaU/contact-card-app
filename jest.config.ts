@@ -15,8 +15,11 @@ const config: Config = {
     "\\.css": "<rootDir>/src/__tests__/__mocks__/styleMock.ts",
   },
   setupFilesAfterEnv: ["./jest.setup.ts"],
-  testEnvironment: "jsdom",
-  testPathIgnorePatterns: ["<rootDir>/node_modules/", "<rootDir>/src/__tests__/__mocks__/"],
+  testEnvironment: "jest-environment-jsdom",
+  testPathIgnorePatterns: [
+    "<rootDir>/node_modules/",
+    "<rootDir>/src/__tests__/__mocks__/",
+  ],
 };
 
 export default config;

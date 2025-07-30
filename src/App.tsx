@@ -1,10 +1,16 @@
-import { Button } from "@chakra-ui/react";
+import { Heading } from "@chakra-ui/react";
+import { BrowserRouter, Route, Routes } from "react-router";
+import Cards from "./components/cards";
 
 function App() {
   return (
     <>
-      <Button>1</Button>
-      <Button>2</Button>
+      <Heading as="h1">デジタル名刺アプリ</Heading>
+      <BrowserRouter>
+        <Routes>
+          <Route path="cards" element={<Cards />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

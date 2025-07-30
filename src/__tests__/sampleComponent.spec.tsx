@@ -5,9 +5,8 @@ import App from "../App";
 test("render App component", async () => {
   render(<App />);
 
-  const buttons = screen.getAllByRole("button");
-  expect(buttons).toHaveLength(2);
+  const title = screen.getByRole("heading", { name: "デジタル名刺アプリ" });
+  expect(title).toBeInTheDocument();
 
-  expect(buttons[0]).toHaveTextContent("1");
-  expect(buttons[1]).toHaveTextContent("2");
+  expect(title).toHaveTextContent("デジタル名刺アプリ");
 });
