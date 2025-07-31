@@ -8,7 +8,7 @@ function App() {
       <Heading as="h1">デジタル名刺アプリ</Heading>
       <BrowserRouter>
         <Routes>
-          <Route path="cards" element={<Cards />} />
+          <Route path="/cards/:id" element={<Cards />} />
         </Routes>
       </BrowserRouter>
     </>
