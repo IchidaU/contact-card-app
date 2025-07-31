@@ -1,5 +1,7 @@
-import { Heading } from "@chakra-ui/react";
+import { Text } from "@chakra-ui/react";
+import { useParams } from "react-router";
 
 export default function Cards() {
-  return <Heading as="h1">Cards</Heading>;
+  const { id } = useParams();
+  return <Text>ID: {id}</Text>;
 }
