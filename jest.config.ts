@@ -10,6 +10,7 @@ const config: Config = {
       },
     ],
   },
+  transformIgnorePatterns: ["/node_modules/(?!(@supabase|isows))"],
   moduleNameMapper: {
     "\\.svg": "<rootDir>/src/__tests__/__mocks__/fileMock.ts",
     "\\.css": "<rootDir>/src/__tests__/__mocks__/styleMock.ts",
@@ -20,6 +21,7 @@ const config: Config = {
     "<rootDir>/node_modules/",
     "<rootDir>/src/__tests__/__mocks__/",
   ],
+  extensionsToTreatAsEsm: [".ts", ".tsx"],
 };
 
 export default config;
